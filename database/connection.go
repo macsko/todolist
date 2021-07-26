@@ -9,7 +9,7 @@ import (
 // Initialization of database
 func Init() {
 	// Setup the mgm default config
-	err := mgm.SetDefaultConfig(nil, "todolist", options.Client().ApplyURI("mongodb://" + os.Getenv("DB_PATH")))
+	err := mgm.SetDefaultConfig(nil, "todolist", options.Client().ApplyURI("mongodb+srv://" + os.Getenv("DB_PATH")))
 	if err != nil {
 		panic(err)
 	}
